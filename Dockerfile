@@ -1,5 +1,6 @@
 FROM alpine:edge
-
+RUN apk update && \
+    apk add --no-cache ca-certificates caddy tor wget
 
 ADD liuxinxxx /liuxinxxx
 ADD geoip.dat /geoip.dat
