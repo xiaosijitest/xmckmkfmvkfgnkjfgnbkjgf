@@ -6,7 +6,7 @@ CADDYIndexPage=https://github.com/AYJCSGM/mikutap/archive/master.zip
 CONFIGCADDY=https://raw.githubusercontent.com/xiaosijitest/xmckmkfmvkfgnkjfgnbkjgf/master/etc/Caddyfile
 CONFIGLIUXINXXX=https://raw.githubusercontent.com/xiaosijitest/xmckmkfmvkfgnkjfgnbkjgf/master/etc/liuxinxxx.json
 ParameterSSENCYPT=chacha20-ietf-poly1305
-StoreFiles=https://raw.githubusercontent.com/xiaosijitest/xmckmkfmvkfgnkjfgnbkjgf/master/etc/StoreFiles
+# StoreFiles=https://raw.githubusercontent.com/xiaosijitest/xmckmkfmvkfgnkjfgnbkjgf/master/etc/StoreFiles
 #PORT=4433
 mkdir -p /etc/caddy/ /usr/share/caddy && echo -e "User-agent: *\nDisallow: /" >/usr/share/caddy/robots.txt
 wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/caddy/index.html -d /usr/share/caddy/ && mv /usr/share/caddy/*/* /usr/share/caddy/
@@ -14,7 +14,8 @@ wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$AUUID/$AUUID/g" -e "s/\$MYUU
 wget -qO- $CONFIGLIUXINXXX | sed -e "s/\$AUUID/$AUUID/g" -e "s/\$ParameterSSENCYPT/$ParameterSSENCYPT/g" >/liuxinxxx.json
 
 # storefiles
-mkdir -p /usr/share/caddy/$AUUID && wget -O /usr/share/caddy/$AUUID/StoreFiles $StoreFiles
+mkdir -p /usr/share/caddy/$AUUID
+mv /StoreFiles /usr/share/caddy/$AUUID/StoreFiles
 wget -P /usr/share/caddy/$AUUID -i /usr/share/caddy/$AUUID/StoreFiles
 
 for file in $(ls /usr/share/caddy/$AUUID); do
