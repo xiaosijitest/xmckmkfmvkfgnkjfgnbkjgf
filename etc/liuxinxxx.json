@@ -6,7 +6,7 @@
     },
     "inbounds": [
       {
-        "port": 443,
+        "listen": "/etc/caddy/vless",
         "protocol": "vless",
         "settings": {
           "udp": false,
