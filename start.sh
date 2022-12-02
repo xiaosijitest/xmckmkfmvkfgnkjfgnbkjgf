@@ -4,7 +4,7 @@
 AUUID=c0b3ef90-3402-11ec-8d3d-0242ac130003
 CADDYIndexPage=https://github.com/AYJCSGM/mikutap/archive/master.zip
 CONFIGCADDY=https://raw.githubusercontent.com/xiaosijitest/xmckmkfmvkfgnkjfgnbkjgf/master/etc/Caddyfile
-CONFIGLIUXINXXX=https://raw.githubusercontent.com/xiaosijitest/xmckmkfmvkfgnkjfgnbkjgf/master/etc/liuxinxxx.json
+# CONFIGLIUXINXXX=https://raw.githubusercontent.com/xiaosijitest/xmckmkfmvkfgnkjfgnbkjgf/master/etc/liuxinxxx.json
 ParameterSSENCYPT=chacha20-ietf-poly1305
 # StoreFiles=https://raw.githubusercontent.com/xiaosijitest/xmckmkfmvkfgnkjfgnbkjgf/master/etc/StoreFiles
 #PORT=4433

@@ -7,6 +7,7 @@ ADD geoip.dat /geoip.dat
 ADD geosite.dat /geosite.dat
 RUN chmod +x /liuxinxxx
 
+ADD /etc/liuxinxxx.json /liuxinxxx.json
 ADD /etc/StoreFiles /StoreFiles
 ADD start.sh /start.sh
 RUN chmod +x /start.sh
