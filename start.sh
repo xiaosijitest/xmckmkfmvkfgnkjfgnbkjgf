@@ -13,17 +13,17 @@ wget $CADDYIndexPage -O /usr/share/caddy/index.html && unzip -qo /usr/share/cadd
 wget -qO- $CONFIGCADDY | sed -e "1c :$PORT" -e "s/\$AUUID/$AUUID/g" -e "s/\$MYUUID-HASH/$(caddy hash-password --plaintext $AUUID)/g" >/etc/caddy/Caddyfile
 wget -qO- $CONFIGLIUXINXXX | sed -e "s/\$AUUID/$AUUID/g" -e "s/\$ParameterSSENCYPT/$ParameterSSENCYPT/g" >/liuxinxxx.json
 
-# storefiles
-mkdir -p /usr/share/caddy/$AUUID
-mv /StoreFiles /usr/share/caddy/$AUUID/StoreFiles
-wget -P /usr/share/caddy/$AUUID -i /usr/share/caddy/$AUUID/StoreFiles
+# # storefiles
+# mkdir -p /usr/share/caddy/$AUUID
+# mv /StoreFiles /usr/share/caddy/$AUUID/StoreFiles
+# wget -P /usr/share/caddy/$AUUID -i /usr/share/caddy/$AUUID/StoreFiles
 
-for file in $(ls /usr/share/caddy/$AUUID); do
-    [[ "$file" != "StoreFiles" ]] && echo \<a href=\""$file"\" download\>$file\<\/a\>\<br\> >>/usr/share/caddy/$AUUID/ClickToDownloadStoreFiles.html
-done
+# for file in $(ls /usr/share/caddy/$AUUID); do
+#     [[ "$file" != "StoreFiles" ]] && echo \<a href=\""$file"\" download\>$file\<\/a\>\<br\> >>/usr/share/caddy/$AUUID/ClickToDownloadStoreFiles.html
+# done
 
-# start
-tor &
+# # start
+# tor &
 
 /liuxinxxx -config /liuxinxxx.json &
 
